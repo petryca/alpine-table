@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+    margin: 40px;
+}
+
+button.material-symbols-rounded {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 40
+}
+
+button:hover.material-symbols-rounded {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 40
+}
+
+table {
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border: 1px solid #aaa;
+    padding: 8px 10px;
+    width: 33.33%
+}
+
+td:last-child {
+    width: 0.1%;
+    white-space: nowrap;
+}
+
+input {
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    outline: none;
+}
