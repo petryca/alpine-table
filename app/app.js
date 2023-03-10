@@ -8,8 +8,7 @@ document.addEventListener('alpine:init', () => {
                 if (!response.ok) throw response.status;
                 this.data = await response.json();
             } catch (e) {
-                console.log('RESPONSE-ERROR:', e);
-                window.location.replace('/');
+                console.log(e);
             }
         },
         async del(id) {
@@ -20,7 +19,7 @@ document.addEventListener('alpine:init', () => {
                 if (!response.ok) throw response.status;
                 this.data = await response.json();
             } catch (e) {
-                console.log('RESPONSE-ERROR:', e);
+                console.log(e);
             }
         },
         async insert() {
@@ -36,7 +35,7 @@ document.addEventListener('alpine:init', () => {
                 this.data = await response.json();
                 this.obj = { a: "", b: "", c: "" };
             } catch (e) {
-                console.log('RESPONSE-ERROR:', e);
+                console.log(e);
             }
         }
     }));

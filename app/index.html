@@ -5,22 +5,19 @@
 <script src="//unpkg.com/alpinejs" defer></script>
 <script src="app.js"></script>
 
-<main x-data="table" x-cloak>
-    <table>
-        <template x-for="obj in data">
-            <tr>    
-                <td x-text="obj.a"></td>
-                <td x-text="obj.b"></td>
-                <td x-text="obj.c"></td>
-                <td><button class="material-symbols-rounded" @click="del(obj.id)">delete</button></td>
-            </tr>    
-        </template>
-        <tr>
-            <td><input type="text" x-model="obj.a"></td>
-            <td><input type="text" x-model="obj.b"></td>
-            <td><input type="number" x-model="obj.c"></td>
-            <td><button @click="insert" class="material-symbols-rounded">add_circle</button></td>
-        </tr>
-    </table>
-</main>
-
+<table x-data="table">
+    <template x-for="obj in data">
+    <tr>    
+        <td x-text="obj.a"></td>
+        <td x-text="obj.b"></td>
+        <td x-text="obj.c"></td>
+        <td><button class="material-symbols-rounded" @click="del(obj.id)">delete</button></td>
+    </tr>    
+    </template>
+    <tr>
+        <td><input type="text" x-model="obj.a"></td>
+        <td><input type="text" x-model="obj.b"></td>
+        <td><input type="number" x-model="obj.c"></td>
+        <td><button @click="insert" class="material-symbols-rounded">add_circle</button></td>
+    </tr>
+</table>
