@@ -1,7 +1,7 @@
 document.addEventListener('alpine:init', () => {
     Alpine.data('table', () => ({
         data: [],
-        obj: {a:"",b:"",c:""},
+        obj: { a: "", b: "", c: "" },
         async init() {
             try {
                 const response = await fetch('/api/data/');
