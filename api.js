@@ -33,7 +33,7 @@ router.post('/data/', async (req, res) => {
     }
 });
 
-router.get('/data/reset/', async (req, res) => {
+router.put('/data/', async (req, res) => {
     try {
         await db.query("DROP TABLE IF EXISTS data");
         await db.query("CREATE TABLE IF NOT EXISTS data (id serial PRIMARY KEY, a varchar, b varchar, c int)");
